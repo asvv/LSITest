@@ -38,6 +38,7 @@
             this.confirmButton = new System.Windows.Forms.Button();
             this.ExportName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExportHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LocalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.exportDataGrid)).BeginInit();
@@ -51,6 +52,7 @@
             this.exportDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ExportName,
             this.ExportDate,
+            this.ExportHour,
             this.UserFullName,
             this.LocalName});
             this.exportDataGrid.Location = new System.Drawing.Point(244, 12);
@@ -125,28 +127,35 @@
             // ExportName
             // 
             this.ExportName.DataPropertyName = "ExportName";
-            this.ExportName.HeaderText = "Export name";
+            this.ExportName.HeaderText = "Nazwa";
             this.ExportName.Name = "ExportName";
             this.ExportName.ReadOnly = true;
             // 
             // ExportDate
             // 
             this.ExportDate.DataPropertyName = "ExportDate";
-            this.ExportDate.HeaderText = "Export date";
+            this.ExportDate.HeaderText = "Data";
             this.ExportDate.Name = "ExportDate";
             this.ExportDate.ReadOnly = true;
+            // 
+            // ExportHour
+            // 
+            this.ExportHour.DataPropertyName = "ExportDate";
+            this.ExportHour.HeaderText = "Godzina";
+            this.ExportHour.Name = "ExportHour";
+            this.ExportHour.ReadOnly = true;
             // 
             // UserFullName
             // 
             this.UserFullName.DataPropertyName = "UserFullName";
-            this.UserFullName.HeaderText = "User";
+            this.UserFullName.HeaderText = "Użytkownik";
             this.UserFullName.Name = "UserFullName";
             this.UserFullName.ReadOnly = true;
             // 
             // LocalName
             // 
             this.LocalName.DataPropertyName = "LocalName";
-            this.LocalName.HeaderText = "Local";
+            this.LocalName.HeaderText = "Lokal";
             this.LocalName.Name = "LocalName";
             this.LocalName.ReadOnly = true;
             // 
@@ -183,6 +192,7 @@
         private System.Windows.Forms.Button confirmButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExportName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExportDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExportHour;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserFullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LocalName;
     }

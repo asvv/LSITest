@@ -22,14 +22,20 @@ namespace LsiTest
         public MainForm()
         {
             InitializeComponent();
-            this.MinimizeBox = false;
-            this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            exportDataGrid.AutoGenerateColumns = false;
+            setupForm();
 
             exportDataProvider = new ExportDataProvider();
             localProvider = new LocalProvider();
             fetchLocals();
+        }
+        void setupForm()
+        {
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            exportDataGrid.AutoGenerateColumns = false;
+            exportDataGrid.Columns["ExportDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
+            exportDataGrid.Columns["ExportHour"].DefaultCellStyle.Format = "hh:mm";
         }
         ReportFilterModel fetchFilter()
         {
@@ -69,5 +75,7 @@ namespace LsiTest
         {
             return selectedLocal != null && (dateFromPicker.Value <= dateToPicker.Value);
         }
+
+       
     }
 }
